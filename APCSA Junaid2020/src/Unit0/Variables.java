@@ -38,14 +38,14 @@ public class Variables
 		
 
 		//output your information here
-		System.out.println("byteOne: " + byteOne);
-		System.out.println("shortOne "+ shortOne);
-		System.out.println("intOne: " + intOne);
-		System.out.println("longOne: " + longOne);
-		System.out.println("floatOne: " + floatOne);
-		System.out.println("doubleOne: " + doubleOne);
-		System.out.println("charOne: " + charOne);
-		System.out.println("charTwo: " + charTwo);
+		System.out.println("8-bit byteOne: " + byteOne);
+		System.out.println("16-bit shortOne "+ shortOne);
+		System.out.println("32-bit intOne: " + intOne);
+		System.out.println("64-bit longOne: " + longOne);
+		System.out.println("32-bit floatOne: " + floatOne);
+		System.out.println("64-bit doubleOne: " + doubleOne);
+		System.out.println("16-bit charOne: " + charOne);
+		System.out.println("16-bit charTwo: " + charTwo);
 		System.out.println("booleanOne: " + booleanOne);
 		System.out.println("stringOne: " + stringOne);
 		
