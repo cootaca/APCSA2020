@@ -61,7 +61,7 @@ public class Distance
 
 	public String toString()
 	{
-		distance = Math.round(distance*1000.0)/1000.0;
-		return "distance == " + distance;
+		String dist = String.format("%.3f\n",distance);
+		return "distance == " + dist;
 	}
 }

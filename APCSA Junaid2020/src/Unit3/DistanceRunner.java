@@ -18,7 +18,7 @@ public class DistanceRunner
 {
 	public static void main( String[] args )
 	{
-		//Test input  1 1 2 1
+		//Test input  1 1 2 1 in default Constructor
 		Distance dist1 = new Distance();
 		dist1.calcDistance();
 		dist1.print();
