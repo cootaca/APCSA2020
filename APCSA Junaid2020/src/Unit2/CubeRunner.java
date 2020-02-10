@@ -15,7 +15,7 @@ public class CubeRunner
 		System.out.println( "Cube area is :: " + Cube.area( 5 ) );		
 		System.out.println( "Cube area is :: " + Cube.area( 19 ) );
 		System.out.println( "Cube area is :: " + Cube.area( 111 ) );
-
+		System.out.println('A'+12);
 	}
 }
 
