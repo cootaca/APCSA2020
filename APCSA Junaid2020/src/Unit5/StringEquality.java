@@ -1,5 +1,6 @@
 package Unit5;
 //(c) A+ Computer Science
+
 //www.apluscompsci.com
 
 //Name -
@@ -9,29 +10,34 @@ package Unit5;
 
 import static java.lang.System.*;
 
-public class StringEquality
-{
+public class StringEquality {
 	private String wordOne, wordTwo;
 
-	public StringEquality()
-	{
+	public StringEquality() {
+		wordOne = "hello";
+		wordTwo = "goodbye";
 	}
 
-	public StringEquality(String one, String two)
-	{
+	public StringEquality(String one, String two) {
+		wordOne = one;
+		wordTwo = two;
 	}
 
-	public void setWords(String one, String two)
-	{
+	public void setWords(String one, String two) {
+		wordOne = one;
+		wordTwo = two;
 	}
 
-	public boolean checkEquality( )
-	{
-		return false;
+	public boolean checkEquality() {
+		return wordOne.equals(wordTwo);
 	}
 
-	public String toString()
-	{
-		return wordOne + " does not have the same letters as " + wordTwo + "\n";
+	public String toString() {
+		if (!checkEquality()) {
+			return wordOne + " does not have the same letters as " + wordTwo + "\n";
+		} 
+		else {
+			return wordOne + " does have the same letters as " + wordTwo + "\n";
+		}
 	}
 }

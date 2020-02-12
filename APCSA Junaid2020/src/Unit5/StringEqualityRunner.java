@@ -13,7 +13,19 @@ public class StringEqualityRunner
 {
 	public static void main( String args[] )
 	{
-		//add test cases
+		StringEquality checker  = new StringEquality();
+		System.out.println(checker.toString());
 		
+		 checker  = new StringEquality("one","two");
+		System.out.println(checker.toString());
+		
+		checker  = new StringEquality("three","four");
+		System.out.println(checker.toString());
+		
+		checker  = new StringEquality("ABC","ABC");
+		System.out.println(checker.toString());
+		
+		checker  = new StringEquality("ABC","CBA");
+		System.out.println(checker.toString());
 	}
 }
