@@ -21,14 +21,14 @@ public class RPSRunner
 		
 			String player = "";
 		
-			out.print("type in your prompt [R,P,S] :: ");
+			out.print("\ntype in your prompt [R,P,S] :: ");
 			
 			//read in the player value
 		
 			RockPaperScissors game = new RockPaperScissors(keyboard.nextLine());	
 			System.out.println(game);
 			
-			System.out.print("Do you want to play again?[y/n] :: ");
+			System.out.print("\nDo you want to play again?[y/n] :: ");
 			if(keyboard.nextLine().toLowerCase().equals("y"))
 				run();
 	}
