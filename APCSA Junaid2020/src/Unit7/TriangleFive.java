@@ -38,9 +38,10 @@ public class TriangleFive
 		if(num+amount+1<=90) {
 			for(int i=0; i<amount;i++,num++) {
 				for (int y=0;y<amount-i;y++) {
-					
+					for(int z=)
+					System.out.println("");
 				}
-				System.out.println("");
+				
 			}
 		}
 		String output="";
