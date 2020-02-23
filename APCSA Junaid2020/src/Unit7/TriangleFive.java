@@ -35,16 +35,21 @@ public class TriangleFive
 	public String toString()
 	{
 		int num = letter;
-		if(num+amount+1<=90) {
-			for(int i=0; i<amount;i++,num++) {
-				for (int y=0;y<amount-i;y++) {
-					for(int z=)
-					System.out.println("");
-				}
-				
-			}
-		}
 		String output="";
+		for(int i =0;i<amount;i++) {
+			for(int j = 0;j<amount-i;j++) {
+				for(int k = j; k<amount;k++) {
+					char chr = (char)(letter+i);
+					if(chr>90) {
+						chr = (char)(chr-26);
+					}
+					output+=chr;
+				}
+				output+=" ";
+			}
+			output+="\n";
+		}
+		
 		return output;
 	}
 }
