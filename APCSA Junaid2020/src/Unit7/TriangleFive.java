@@ -12,7 +12,7 @@ public class TriangleFive
 
 	public TriangleFive()
 	{
-		letter = 'z';
+		letter = 'Z';
 		amount = 4;
 	}
 
@@ -39,7 +39,7 @@ public class TriangleFive
 		for(int i =0;i<amount;i++) {
 			for(int j = 0;j<amount-i;j++) {
 				for(int k = j; k<amount;k++) {
-					char chr = (char)(letter+i);
+					char chr = (char)(letter+j);
 					if(chr>90) {
 						chr = (char)(chr-26);
 					}
