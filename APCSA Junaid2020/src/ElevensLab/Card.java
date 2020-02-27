@@ -9,20 +9,69 @@ public class Card
 			"FIVE","SIX","SEVEN","EIGHT","NINE","TEN","JACK","QUEEN","KING"};
 
 	//instance variables
-		//String suit
-		//int face
+		private String suit;
+		private String rank;
+		
+		private int face;
+		private int pointValue;
 
   	//constructors
-
+		public Card(String cardSuit, int faceValue){
+			suit = cardSuit;
+			face = faceValue;
+		}
+		public Card(String rank, String suit, int pointValue) {
+			this.rank = rank;
+			this.suit = suit;
+			this.pointValue = pointValue;
+			face = pointValue;
+		}
 
 	// modifiers
-		//set methods
-
-
-  	//accessors
+		public void setCard(String cardSuit, int faceValue){
+			suit = cardSuit;
+			face = faceValue;
+		}
+		public void setSuit(String Suit) {
+			suit = Suit;
+		}
+		public void setFace(int face) {
+			this.face = face;
+		}
+		public void setRank(String rank) {
+			this.rank = rank;
+		}
+		public void setPointValue(int pointValue) {
+			this.pointValue = pointValue;
+		}
 		//get methods
+		public String getCardSuit() {
+			return suit;
+		}
+		public String getRank() {
+			return rank;
+		}
+		public int getFaceValue() {
+			return face;
+		}
+		public int getPointValue() {
+			return pointValue;
+		}
+		 public boolean matches(Card card2) {
+			    if(card2.getCardSuit().equals(this.getCardSuit()) && card2.getRank().equals(this.getRank()) && card2.getPointValue() == this.getPointValue())
+			      return true;
+			    else
+			      return false;
+		 }
+		 
+		//toString
+		 public String toString() {
+			 rank = FACES[pointValue];
+			 return  rank + " of " + suit + " (point value = " + pointValue + ")";
+		 }
+  
 
 
-  	//toString
+  	
 
  }
