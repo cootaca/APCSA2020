@@ -14,7 +14,9 @@ public class Card
 		
 		private int face;
 		private int pointValue;
-
+		public Card() {
+			
+		}
   	//constructors
 		public Card(String cardSuit, int faceValue){
 			suit = cardSuit;

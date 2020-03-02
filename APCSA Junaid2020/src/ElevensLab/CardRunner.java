@@ -12,23 +12,34 @@ public class CardRunner
 	{
 		 
 		 
-		Card one = new Card("SPADES", 9);
-		out.println(one.getCardSuit());
-		out.println(one.getFaceValue());
+		Card aceClubs1 = new Card("ace", "clubs", 1);
+		Card aceClubs2 = new Card("ace", "clubs", 1);
+		Card sixHearts = new Card("6", "hearts", 6);
 
-		Card two = new Card("one","DIAMONDS", 1);
-		out.println(two);
-		two.setFace(3);
-		out.println(two);
+		System.out.println("**** ace of clubs #1 Tests ****");
+		System.out.println("  rank: " + aceClubs1.getRank());
+		System.out.println("  suit: " + aceClubs1.getCardSuit());
+		System.out.println("  pointValue: " + aceClubs1.getPointValue());
+		System.out.println("  toString: " + aceClubs1.toString());
+		System.out.println();
 
-		Card three = new Card("four","CLUBS", 4);
-		out.println(three);
+		System.out.println("**** ace of clubs #2 Tests ****");
+		System.out.println("  rank: " + aceClubs2.getRank());
+		System.out.println("  suit: " + aceClubs2.getCardSuit());
+		System.out.println("  pointValue: " + aceClubs2.getPointValue());
+		System.out.println("  toString: " + aceClubs2.toString());
+		System.out.println();
 
-		Card four = new Card("twelve","SPADES", 12);
-		out.println(four);
+		System.out.println("**** six of hearts Tests ****");
+		System.out.println("  rank: " + sixHearts.getRank());
+		System.out.println("  suit: " + sixHearts.getCardSuit());
+		System.out.println("  pointValue: " + sixHearts.getPointValue());
+		System.out.println("  toString: " + sixHearts.toString());
+		System.out.println();
 
-		Card five = new Card("twelve","HEARTS", 12);
-		out.println(five);
+		System.out.println("**** matches Tests ****");
 		
+		System.out.println("  matching: " + aceClubs1.matches(aceClubs2));
+		System.out.println("  not matching: " + aceClubs1.matches(sixHearts));
 	}
 }
