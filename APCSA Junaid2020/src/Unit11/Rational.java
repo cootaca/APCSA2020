@@ -21,10 +21,18 @@ class Rational implements Comparable<Rational>
 	}
 
 	//write a setRational method
-	
+	public void setRational (int num, int denom) {
+		newNum = num;
+		newDenom = denom;
+	}
 
 	//write  a set method for numerator and denominator
-
+	public void setNum(int num) {
+		newNum = num;
+	}
+	public void setDenom(int denom) {
+		newDenom = denom;
+	}
 	
 	public void add(Rational  other)
 	{
