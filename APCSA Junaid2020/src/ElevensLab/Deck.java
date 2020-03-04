@@ -27,7 +27,7 @@ public class Deck {
   
   public Deck(){
 	  for(int i = 0;i<SUITS.length;i++) {
-		  
+		  for(int r=0;r<)
 	  }
   }
   public Deck(String[] ranks, String[] suits, int[] values) {
