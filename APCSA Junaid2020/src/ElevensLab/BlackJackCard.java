@@ -1,4 +1,5 @@
 package ElevensLab;
+
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -6,9 +7,9 @@ package ElevensLab;
 public class BlackJackCard extends Card
 {
   	//constructors
-  	public BlackJackCard( String s, int f)
+  	public BlackJackCard( String str, int num)
   	{
-  		super( s, f );
+  		super( str, num );
   	}
 
   	//accessors
