@@ -12,16 +12,16 @@ public class CardRunner
 	public static void main( String args[] )
 	{
 		Card one = new Card("4", "SPADES", 6);
-		out.println(one.getSuit());
+		out.println(one.getCardSuit());
 		out.println(one.getRank());
 
-		Card two = new Card("7", "Hearts", 1);
+		Card two = new Card("7", "HEARTS", 1);
 		out.println(two);
 		two.setRank("2");
 		out.println(two);
 
-		Card three = new Card("4", "Spades", 6);
-		out.print(three.match(two));
+		Card three = new Card("4", "SPADES", 6);
+		out.print(three.matches(one));
 		
 	}
 }

@@ -23,7 +23,7 @@ public class Deck {
 		// refer cards to new ArrayList
 		// set top to the top of the deck 51
 		cards = new ArrayList<Card>();
-		for (int k = 0; k < 4; i++) {
+		for (int k = 0; k < 4; k++) {
 			for (int j = 1; j <= 13; j++) {
 				cards.add(new Card(SUITS[k], j));
 			}
