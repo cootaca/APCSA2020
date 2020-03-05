@@ -1,3 +1,4 @@
+package Buggy;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -31,11 +32,12 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		cards = new ArrayList<Card>();
-		for (int j = 1; j < ranks.length; j++) {
+		for (int j = 0; j < ranks.length; j++) {
 			for (String suitString : suits) {
 				cards.add(new Card(ranks[j], suitString, values[j]));
 			}
 		}
+		
 		shuffle();
 	}
 
@@ -45,7 +47,7 @@ public class Deck {
 	 * @return true if this deck is empty, false otherwise.
 	 */
 	public boolean isEmpty() {
-		return size < 0;
+		return size == 0;
 	}
 
 	/**
@@ -61,7 +63,7 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		for (int k = cards.size() - 1; k < 0; k--) {
+		for (int k = cards.size() - 1; k > 0; k--) {
 			int howMany = k + 1;
 			int start = 0;
 			int randPos = (int) (Math.random() * howMany) + start;
@@ -78,11 +80,12 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		size--;
+		
 		if (isEmpty()) {
 			return null;
 		}
-		Card c = cards.get(size);
+		Card c = cards.get(size-1);
+		size--;
 		return c;
 	}
 
