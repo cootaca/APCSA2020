@@ -44,7 +44,7 @@ public class Shape
    {
       window.setColor(color);
       window.fillRect(xPos, yPos, width, height);
-      System.out.println("hello");
+     
       window.setColor(Color.cyan);
       window.fillArc(xPos, yPos, width, height, 0, 360);
       //draw whatever you want

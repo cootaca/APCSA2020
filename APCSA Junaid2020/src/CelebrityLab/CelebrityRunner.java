@@ -12,6 +12,9 @@ public class CelebrityRunner
 	 */
 	public static void main(String [] args)
 	{
-
+		Celebrity celeb = new Celebrity( "the nibbletarian","They are a nibblet");
+		System.out.println(celeb);
+		CelebrityGame celebGame= new CelebrityGame();
+		celebGame.play();
 	}
 }
