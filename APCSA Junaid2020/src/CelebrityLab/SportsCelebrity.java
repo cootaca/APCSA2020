@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class SportsCelebrity extends Celebrity {
 
+	private ArrayList<String> clueList;
 	public SportsCelebrity(String answer, String clue) {
 		super(answer, clue);
-		// TODO Auto-generated constructor stub
+		processClues();
 	}
 	
-	private ArrayList<String> clueList;
+	
 	
 	/**
 	 * Builds a LiteratureCelebrity instance with an answer and a series of clues as a String separated by commas.
@@ -52,7 +53,7 @@ public class SportsCelebrity extends Celebrity {
 	@Override
 	public String toString()
 	{
-		String dsc = "This is the literature celebrity: " + getAnswer() + "\nThe clues are:\n";
+		String dsc = "This is the sports celebrity: " + getAnswer() + "\nThe clues are:\n";
 		
 		for (String word : super.getClue().split(","))
 		{

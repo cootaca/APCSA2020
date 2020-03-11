@@ -15,6 +15,8 @@ public class CelebrityRunner
 		Celebrity celeb = new Celebrity( "the nibbletarian","They are a nibblet");
 		System.out.println(celeb);
 		CelebrityGame celebGame= new CelebrityGame();
-		celebGame.play();
+		celebGame.prepareGame();
+		
 	}
 }
+
