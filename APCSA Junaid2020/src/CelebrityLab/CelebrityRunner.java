@@ -1,4 +1,5 @@
 package CelebrityLab;
+
 /**
  * Starts the Celebrity Game application
  * @author cody.henrichsen
@@ -12,11 +13,7 @@ public class CelebrityRunner
 	 */
 	public static void main(String [] args)
 	{
-		Celebrity celeb = new Celebrity( "the nibbletarian","They are a nibblet");
-		System.out.println(celeb);
-		CelebrityGame celebGame= new CelebrityGame();
+		CelebrityGame celebGame = new CelebrityGame();
 		celebGame.prepareGame();
-		
 	}
 }
-

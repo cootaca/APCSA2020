@@ -1,4 +1,6 @@
+
 package CelebrityLab;
+
 import java.awt.CardLayout;
 
 import javax.swing.JFrame;

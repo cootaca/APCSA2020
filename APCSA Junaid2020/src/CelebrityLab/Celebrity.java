@@ -1,4 +1,5 @@
 package CelebrityLab;
+
 /**
  * Celebrity base class for the Celebrity game.
  * @author cody.henrichsen
@@ -9,18 +10,16 @@ public class Celebrity
 	/**
 	 * The clue to determine the celebrity
 	 */
-	
+	String clue;
 	/**
 	 * The answer or name of the celebrity.
 	 */
-	private String clue, answer;
-	
+	String answer;
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
 	 * @param clue
 	 */
-	
 	public Celebrity(String answer, String clue)
 	{
 		this.answer = answer;
@@ -69,7 +68,7 @@ public class Celebrity
 	@Override
 	public String toString()
 	{
-		return "The clue is "+ clue+" and the answer is "+answer;
+		return "The clue is " + clue + " The answer is " + answer;
 	}
 	
 }
