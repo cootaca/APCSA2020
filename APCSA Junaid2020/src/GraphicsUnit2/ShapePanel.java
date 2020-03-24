@@ -32,7 +32,7 @@ public class ShapePanel extends JPanel
 	 *All of your test code should be placed in paint.
 	 */
 	public void paint(Graphics window)
-	{
+	{  
 		window.setColor(Color.WHITE);
 		window.fillRect(0,0,getWidth(), getHeight());
 		window.setColor(Color.BLUE);

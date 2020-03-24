@@ -18,7 +18,7 @@ public class Shape
 	private int height;
 	private Color color;
 	private int xSpeed;
-	private int ySpeed;
+	private int ySpeed; 
 
    /*
     *The constructor is used to initialize all instance variables.
@@ -65,7 +65,10 @@ public class Shape
 
    public void moveAndDraw(Graphics window)
    {
-    	//not needed yet
+  
+	xPos += xSpeed;
+	yPos += ySpeed;
+	   this.draw(window);
    }
 
    //add in set and get methods for xPos, yPos, xSpeed, and ySpeed
@@ -73,10 +76,15 @@ public class Shape
    {
    	return this.xPos;
    }
-   
+   public int width() {
+	   return this.width;
+   }
    public int getY()
    {
    	return this.yPos;
+   }
+   public int height() {
+	   return this.height;
    }
    
    public int xSpeed()
