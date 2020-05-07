@@ -154,8 +154,8 @@ public class Ball extends Block implements Collidable
 
 	@Override
 	public boolean didCollideTop(Object obj) {
-		// TODO Auto-generated method stub
-		if(this.getY()<=10) {
+		Wall wallTop = (Wall)obj;
+		if(this.getY()<=wallTop.getY()+wallTop.getHeight()) {
 			return true;
 		}
 		return false;
@@ -163,18 +163,18 @@ public class Ball extends Block implements Collidable
 
 	@Override
 	public boolean didCollideBottom(Object obj) {
-		// TODO Auto-generated method stub
-		if(this.getY()+this.getHeight()>=570) {
+		Wall wallBottom = (Wall)obj;
+		if(this.getY()+this.getHeight()>=wallBottom.getY()) {
 			return true;
 		}
 		return false;
 	}
-	 public int collisionProcessor(Integer countLeft, Integer countRight, Paddle leftPaddle, Paddle rightPaddle, Graphics graphToBack) {
+	 public int collisionProcessor(Integer countLeft, Integer countRight, Paddle leftPaddle, Paddle rightPaddle, Graphics graphToBack, Wall wallTop, Wall wallBottom) {
 		   
 		   
-		   if (this.didCollideBottom(leftPaddle)) {
+		   if (this.didCollideBottom(wallBottom)) {
 				this.setYSpeed(-this.getYSpeed());
-			} else if (this.didCollideTop(leftPaddle)) {
+			} else if (this.didCollideTop(wallTop)) {
 				this.setYSpeed(-this.getYSpeed());
 			}
 

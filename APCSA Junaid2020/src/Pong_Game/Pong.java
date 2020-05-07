@@ -21,27 +21,31 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 
 public class Pong extends Canvas implements KeyListener, Runnable {
-	//private SpeedUpBall ball;
+	private SpeedUpBall ball;
 	//private InvisibleBall ball;
-	private BlinkyBall ball;
+	//private BlinkyBall ball;
 	private Paddle leftPaddle;
 	private Paddle rightPaddle;
 	private boolean[] keys;
 	private BufferedImage back;
 	private Integer countLeft = 0;
 	private Integer countRight = 0;
-	
+	private Wall wallTop;
+	private Wall wallBottom;
+	private int ogx;
+	private int ogy;
 
 	public Pong() {
-		//ball = new SpeedUpBall(200, 200, 10, 10,2,2);
-		//ball = new InvisibleBall(200, 200, 10, 10,2,2);
-		ball = new BlinkyBall(200, 200, 10, 10,4,2);
+		ball = new SpeedUpBall(200, 200, 10, 10,2,2);
+		//ball = new InvisibleBall(200, 200, 10, 10,4,4);
+		//ball = new BlinkyBall(200, 200, 10, 10,4,2);
 		leftPaddle = new Paddle(10, 100, 10, 200, 6);
 
 		rightPaddle = new Paddle(780, 100, 10, 200, Color.black, 6);
 
 		keys = new boolean[4];
-
+		wallTop = new Wall(leftPaddle.getX(),0,rightPaddle.getX()-leftPaddle.getX()+rightPaddle.getWidth());
+		wallBottom = new Wall(leftPaddle.getX(),570,rightPaddle.getX()-leftPaddle.getX()+rightPaddle.getWidth());
 		setBackground(Color.WHITE);
 		setVisible(true);
 
@@ -65,12 +69,15 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 		// create a graphics reference to the back ground image
 		// we will draw all changes on the background image
 		Graphics graphToBack = back.createGraphics();
+		
 		scoreUpdater(graphToBack);
+		wallBottom.draw(graphToBack);
+		wallTop.draw(graphToBack);
 		ball.moveAndDraw(graphToBack);
 		leftPaddle.draw(graphToBack);
 		rightPaddle.draw(graphToBack);
 
-		int x =ball.collisionProcessor(countLeft,countRight,leftPaddle,rightPaddle,graphToBack);
+		int x =ball.collisionProcessor(countLeft,countRight,leftPaddle,rightPaddle,graphToBack,wallTop,wallBottom);
 		if(x==1)
 			countLeft++;
 		else if(x==2) {

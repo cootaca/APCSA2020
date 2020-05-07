@@ -82,13 +82,13 @@ class SpeedUpBall extends Ball
 
    }
    
-   public int collisionProcessor(Integer countLeft, Integer countRight, Paddle leftPaddle, Paddle rightPaddle, Graphics graphToBack) {
+   public int collisionProcessor(Integer countLeft, Integer countRight, Paddle leftPaddle, Paddle rightPaddle, Graphics graphToBack, Wall wallTop, Wall wallBottom) {
 	   
 	   
-	   if (this.didCollideBottom(leftPaddle)) {
+	   if (this.didCollideBottom(wallBottom)) {
 			int temp = this.getYSpeed()>=0?this.getYSpeed()+1:this.getYSpeed()-1;
 			this.setYSpeed(-temp);
-		} else if (this.didCollideTop(leftPaddle)) {
+		} else if (this.didCollideTop(wallTop)) {
 			int temp = this.getYSpeed()>=0?this.getYSpeed()+1:this.getYSpeed()-1;
 			this.setYSpeed(-temp);
 		}

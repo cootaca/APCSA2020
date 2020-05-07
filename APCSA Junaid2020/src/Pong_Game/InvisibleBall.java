@@ -20,8 +20,8 @@ public class InvisibleBall extends Ball{
 	   public InvisibleBall(int x, int y, int wid, int ht)
 	   {
 		   super(x,y, wid, ht);
-		   setXSpeed(-4);
-		   setXSpeed(2);
+		   setXSpeed(-6);
+		   setXSpeed(4);
 
 	   }
 
@@ -59,12 +59,12 @@ public class InvisibleBall extends Ball{
 	   }
 		  
 	}
-	   public int collisionProcessor(Integer countLeft, Integer countRight, Paddle leftPaddle, Paddle rightPaddle, Graphics graphToBack) {
+	   public int collisionProcessor(Integer countLeft, Integer countRight, Paddle leftPaddle, Paddle rightPaddle, Graphics graphToBack, Wall wallTop, Wall wallBottom) {
 		   
 		   
-		   if (this.didCollideBottom(leftPaddle)) {
+		   if (this.didCollideBottom(wallBottom)) {
 				this.setYSpeed(-this.getYSpeed());
-			} else if (this.didCollideTop(leftPaddle)) {
+			} else if (this.didCollideTop(wallTop)) {
 				this.setYSpeed(-this.getYSpeed());
 			}
 
