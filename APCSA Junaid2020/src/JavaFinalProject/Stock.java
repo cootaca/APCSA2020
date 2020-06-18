@@ -184,37 +184,7 @@ public class Stock extends InvestmentVehicle{
 		this.yearsHeld= yearsPassed;
 		
 	}
-	/*public static double getPriceAtDate(String date, String ticker) throws IOException {
-		URL url = new URL("https://finance.yahoo.com/quote/TSLA");
-		Integer time = dateToSeconds(date+"T00:00:00.000-0000");
-		
-		Integer time2 = 86400;
-		if(time>0) {
-			time2+=time;
-		}
-		try {
-		url = new URL("https://finance.yahoo.com/quote/"+ticker+"/history?period1="+time+"&period2="+time2+"&interval=1d&filter=history&frequency=1d");
-		System.out.println(url);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-		Scanner sc = new Scanner(url.openStream());
-	    StringBuffer sb = new StringBuffer();
-	    while(sc.hasNextLine()) {
-	         sb.append(sc.nextLine());
-	      }
-	      String result = sb.toString();
-	      //System.out.println(result);
-	      String str  = "<span data-reactid=\"63\">";
-	      String str2 = "</span>";
-	      /*if(result.contains(str)) {
-	    	  int index = result.indexOf(str);
-	    	  int index1 = result.indexOf(str2, index);
-	    	  return Double.parseDouble(result.substring(index+str.length(),index1).replace(",", ""));
-	      }
-	     
-	      return 0;
-	}*/
+
 	public static double getPriceAtDate(String date, String ticker) throws IOException{
 		Integer time = dateToSeconds(date+"T00:00:00.000-0000");
 		Integer time2 = 86400;
@@ -264,29 +234,28 @@ public class Stock extends InvestmentVehicle{
 		}
 	}
 
-//
-		public static Integer dateToSeconds(String timestamp){
-		  if(timestamp == null) return null;
-		  try {
-		    SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy'T'HH:mm:ss.SSSZ");
-		    Date dt = sdf.parse(timestamp);
-		    long epoch = dt.getTime();
-		    return (int)(epoch/1000);
-		  } catch(ParseException e) {
-		    return 0;
-		  }
-		  
-		}
+	public static Integer dateToSeconds(String timestamp){
+	  if(timestamp == null) return null;
+	  try {
+	    SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy'T'HH:mm:ss.SSSZ");
+	    Date dt = sdf.parse(timestamp);
+	    long epoch = dt.getTime();
+	    return (int)(epoch/1000);
+	  } catch(ParseException e) {
+	    return 0;
+	  }
+	  
+	}
 			
-	   public static void main(String args[]) throws IOException{
-		   	  Scanner scan = new Scanner(System.in);
-		      System.out.println("Enter A date: ");
-		      String date = scan.next();
-		      System.out.println("Enter A ticker: ");
-		      String ticker = scan.next();
-		      System.out.println(Stock.fetchStockPrice(ticker));
-		      System.out.println(Stock.getPriceAtDate(date, ticker));
-		      System.out.println(Stock.getAdjustedPriceAtDate(date, ticker));
+   public static void main(String args[]) throws IOException{
+	   	  Scanner scan = new Scanner(System.in);
+	      System.out.println("Enter A date: ");
+	      String date = scan.next();
+	      System.out.println("Enter A ticker: ");
+	      String ticker = scan.next();
+	      System.out.println(Stock.fetchStockPrice(ticker));
+	      System.out.println(Stock.getPriceAtDate(date, ticker));
+	      System.out.println(Stock.getAdjustedPriceAtDate(date, ticker));
 		      
 		   }
 }
